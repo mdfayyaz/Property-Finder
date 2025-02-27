@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Finder - Original Style</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Property Finder</h1>
+        <nav>
+            <button id="registerBtn">Register</button>
+            <button id="loginBtn">Login</button>
+        </nav>
+    </header>
+
+    <section id="searchSection">
+        <input type="text" id="searchInput" placeholder="Search Properties">
+        <button id="searchButton">Search</button>
+        <div class="filter-options">
+            <select id="locationFilter">
+                <option value="">Location</option>
+                <option value="Zakir Hussain Nagar">Zakir Hussain Nagar</option>
+                <option value="Dargha Road">Dargha Road</option>
+                <option value="Yousuf Colony">Yousuf Colony</option>
+                <option value="Gulzar Colony">Gulzar Colony</option>
+                <option value="Iqbal Nagar">Iqbal Nagar</option>
+            </select>
+            <select id="propertyTypeFilter">
+                <option value="">Property Type</option>
+                <option value="Apartment">Apartment</option>
+                <option value="Villa">Villa</option>
+            </select>
+            <select id="priceRangeFilter">
+                <option value="">Price Range</option>
+                <option value="500000">Below ₹500,000</option>
+                <option value="1000000">₹500,000 - ₹1,000,000</option>
+                <option value="above1000000">Above ₹1,000,000</option>
+            </select>
+        </div>
+    </section>
+
+    <section id="propertyList">
+    </section>
+
+    <div id="calculator">
+        <h2>Property Rate Calculator (INR)</h2>
+        <input type="number" id="priceInput" placeholder="Price (₹)">
+        <input type="number" id="areaInput" placeholder="Area">
+        <select id="areaUnit">
+            <option value="sqft">Sqft</option>
+            <option value="acre">Acre</option>
+        </select>
+        <button id="calculateBtn">Calculate Price/Sqft</button>
+        <p id="result"></p>
+    </div>
+
+    <div id="converter">
+        <h2>Measurement Converter</h2>
+        <input type="number" id="convertInput" placeholder="Value">
+        <select id="fromUnit">
+            <option value="sqft">Sqft</option>
+            <option value="acre">Acre</option>
+        </select>
+        <select id="toUnit">
+            <option value="sqft">Sqft</option>
+            <option value="acre">Acre</option>
+        </select>
+        <button id="convertBtn">Convert</button>
+        <p id="conversionResult"></p>
+    </div>
+
+    <footer>
+        <nav>
+            <a href="#">Property</a>
+            <a href="#">Automobiles</a>
+            <a href="#">Mobiles</a>
+            <a href="#">Furniture</a>
+        </nav>
+        <p>&copy; 2024 Property Finder. All rights reserved.</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
